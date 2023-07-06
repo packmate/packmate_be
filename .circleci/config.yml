@@ -56,7 +56,7 @@ workflows:
           post-steps:
             - run:
                 name: migrate
-                command: heroku run -a inklink-be rails db:migrate
+                command: heroku run -a packmate-be rails db:migrate
           filters:
             branches:
               only:
