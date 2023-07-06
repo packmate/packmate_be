@@ -40,9 +40,6 @@ jobs: # a collection of steps
           name: Database setup
           command: bin/rails db:{create,migrate} --trace
       - run:
-          name: Precompile Assets
-          command: bundle exec rake assets:precompile
-      - run:
           name: Run rspec in parallel
           command: bundle exec rspec
       # Save test results for timing analysis
