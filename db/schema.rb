@@ -16,12 +16,12 @@ ActiveRecord::Schema.define(version: 2023_07_06_195256) do
   enable_extension "plpgsql"
 
   create_table "item_tags", force: :cascade do |t|
-    t.bigint "items_id"
-    t.bigint "tags_id"
+    t.bigint "item_id"
+    t.bigint "tag_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["items_id"], name: "index_item_tags_on_items_id"
-    t.index ["tags_id"], name: "index_item_tags_on_tags_id"
+    t.index ["item_id"], name: "index_item_tags_on_item_id"
+    t.index ["tag_id"], name: "index_item_tags_on_tag_id"
   end
 
   create_table "items", force: :cascade do |t|
@@ -31,24 +31,25 @@ ActiveRecord::Schema.define(version: 2023_07_06_195256) do
   end
 
   create_table "list_items", force: :cascade do |t|
-    t.bigint "lists_id"
-    t.bigint "items_id"
+    t.bigint "list_id"
+    t.bigint "item_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["items_id"], name: "index_list_items_on_items_id"
-    t.index ["lists_id"], name: "index_list_items_on_lists_id"
+    t.index ["item_id"], name: "index_list_items_on_item_id"
+    t.index ["list_id"], name: "index_list_items_on_list_id"
   end
 
   create_table "lists", force: :cascade do |t|
-    t.string "type"
+    t.string "name"
+    t.string "trip_type"
     t.string "travelers"
     t.string "destination"
     t.date "date"
     t.integer "duration"
-    t.bigint "users_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["users_id"], name: "index_lists_on_users_id"
+    t.index ["user_id"], name: "index_lists_on_user_id"
   end
 
   create_table "tags", force: :cascade do |t|
@@ -63,9 +64,9 @@ ActiveRecord::Schema.define(version: 2023_07_06_195256) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "item_tags", "items", column: "items_id"
-  add_foreign_key "item_tags", "tags", column: "tags_id"
-  add_foreign_key "list_items", "items", column: "items_id"
-  add_foreign_key "list_items", "lists", column: "lists_id"
-  add_foreign_key "lists", "users", column: "users_id"
+  add_foreign_key "item_tags", "items"
+  add_foreign_key "item_tags", "tags"
+  add_foreign_key "list_items", "items"
+  add_foreign_key "list_items", "lists"
+  add_foreign_key "lists", "users"
 end
