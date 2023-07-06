@@ -1,23 +1,16 @@
 # frozen_string_literal: true
 
 module Types
-  class UserType < Types::BaseObject
+  class ListType < Types::BaseObject
     field :id, ID, null: false
     field :name, String
+    field :trip_type, String
+    field :travelers, String
+    field :destination, String
+    field :date, GraphQL::Types::ISO8601Date
+    field :duration, Integer
+    field :user_id, Integer
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
-    field :lists, [Types::ListType], null: true
-
-    field :lists_count, Integer, null: true
-
-    def lists
-      object.lists
-    end
-
-    def lists_count
-      object.lists.size
-    end
-
   end
 end
-
