@@ -1,4 +1,4 @@
 class ListItem < ApplicationRecord
-  belongs_to :lists
-  belongs_to :items
+  belongs_to :list
+  belongs_to :item
 end

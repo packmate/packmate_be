@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+List.destroy_all
+User.destroy_all
+
+user = User.create!(name: Faker::Name.name)
+user.lists.create!(name: "My fun list", trip_type: 'Camping',travelers: 'Paul', destination: 'Paris', date: '2019-07-06', duration: 7)
