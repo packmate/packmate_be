@@ -8,6 +8,27 @@
 
 List.destroy_all
 User.destroy_all
+Tag.destroy_all
 
 user = User.create!(name: Faker::Name.name)
-user.lists.create!(name: "My fun list", trip_type: 'Camping',travelers: 'Paul', destination: 'Paris', date: '2019-07-06', duration: 7)
+
+tag_1 = Tag.create!(category: "Camping")
+tag_2 = Tag.create!(category: "Hiking")
+tag_3 = Tag.create!(category: "Climbing")
+
+item_1 = tag_1.items.create!(name: "Tent")
+item_2 = tag_1.items.create!(name: "Sleeping Bag")
+item_3 = tag_1.items.create!(name: "Firewood")
+
+item_4 = tag_2.items.create!(name: "Hiking Boots")
+item_5 = tag_2.items.create!(name: "Backpack")
+item_6 = tag_2.items.create!(name: "Water Bottle")
+
+item_7 = tag_3.items.create!(name: "Climbing Shoes")
+item_8 = tag_3.items.create!(name: "Chalk Bag")
+item_9 = tag_3.items.create!(name: "Harness")
+
+item_10 = Item.create!(name: "Suncreen")
+ItemTag.create!(item: item_10, tag: tag_1)
+ItemTag.create!(item: item_10, tag: tag_2)
+ItemTag.create!(item: item_10, tag: tag_3)

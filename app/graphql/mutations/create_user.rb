@@ -1,10 +1,15 @@
 class Mutations::CreateUser < Mutations::BaseMutation
   argument :name, String, required: true
 
-  field :user, Types::UserType, null: false
+  field :user, Types::UserType
   field :errors, [String], null: false
 
   def resolve(name:)
+
+    if name.blank?
+      raise GraphQL::ExecutionError, "Name cannot be blank"
+    end
+
     user = User.new(name: name)
     if user.save
       {
@@ -14,7 +19,8 @@ class Mutations::CreateUser < Mutations::BaseMutation
     else
       {
         user: nil,
-        errors: user.errors.full_messages
+        errors: "Name must not be blank."
+        
       }
     end
   end
