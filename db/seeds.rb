@@ -7,10 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 List.destroy_all
-User.destroy_all
 Tag.destroy_all
 
-user = User.create!(name: Faker::Name.name)
 
 tag_1 = Tag.create!(category: "Camping")
 tag_2 = Tag.create!(category: "Hiking")
