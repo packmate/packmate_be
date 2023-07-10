@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2023_07_06_195256) do
   end
 
   create_table "items", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -40,26 +40,14 @@ ActiveRecord::Schema.define(version: 2023_07_06_195256) do
   end
 
   create_table "lists", force: :cascade do |t|
-    t.string "name"
-    t.string "trip_type"
-    t.string "travelers"
-    t.string "destination"
-    t.date "date"
-    t.integer "duration"
-    t.bigint "user_id"
+    t.string "name", null: false
+    t.string "trip_type", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_lists_on_user_id"
   end
 
   create_table "tags", force: :cascade do |t|
-    t.string "category"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "name"
+    t.string "category", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -68,5 +56,4 @@ ActiveRecord::Schema.define(version: 2023_07_06_195256) do
   add_foreign_key "item_tags", "tags"
   add_foreign_key "list_items", "items"
   add_foreign_key "list_items", "lists"
-  add_foreign_key "lists", "users"
 end
