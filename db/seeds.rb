@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 ItemTag.destroy_all
-List.destroy_all
 Tag.destroy_all
 Item.destroy_all
+List.destroy_all
 
 
 camping_tag = Tag.create!(category: 'Camping')
@@ -20,22 +20,22 @@ backpacking_tag = Tag.create!(category: 'Backpacking')
 fishing_tag = Tag.create!(category: 'Fishing')
 
 # CAMPING ITEMS
-# folding_table = camping_tag.items.create!(name: 'Folding Table')
-# flashlight = camping_tag.items.create!(name: 'Flashlight')
-# duct_tape = camping_tag.items.create!(name: 'Duct Tape')
-# air_mattress = camping_tag.items.create!(name: 'Air Mattress')
-# pillow = camping_tag.items.create!(name: 'Pillow')
-# blankets = camping_tag.items.create!(name: 'Blankets')
-# camp_stove = camping_tag.items.create!(name: 'Camp Stove')
-# firewood = camping_tag.items.create!(name: 'Firewood')
-# grill_grate = camping_tag.items.create!(name: 'Grill Grate')
-# water_bucket = camping_tag.items.create!(name: 'Water Bucket')
-# plates = camping_tag.items.create!(name: 'Plates')
-# cups = camping_tag.items.create!(name: 'Cups')
-# portable_coffee_maker = camping_tag.items.create!(name: 'Portable Coffee Maker')
-# campsite_games = camping_tag.items.create!(name: 'Campsite Games')
-# smores = camping_tag.items.create!(name: 'Smores')
-# prepared_meals = camping_tag.items.create!(name: 'Prepared Meals')
+folding_table = camping_tag.items.create!(name: 'Folding Table')
+flashlight = camping_tag.items.create!(name: 'Flashlight')
+duct_tape = camping_tag.items.create!(name: 'Duct Tape')
+air_mattress = camping_tag.items.create!(name: 'Air Mattress')
+pillow = camping_tag.items.create!(name: 'Pillow')
+blankets = camping_tag.items.create!(name: 'Blankets')
+camp_stove = camping_tag.items.create!(name: 'Camp Stove')
+firewood = camping_tag.items.create!(name: 'Firewood')
+grill_grate = camping_tag.items.create!(name: 'Grill Grate')
+water_bucket = camping_tag.items.create!(name: 'Water Bucket')
+plates = camping_tag.items.create!(name: 'Plates')
+cups = camping_tag.items.create!(name: 'Cups')
+portable_coffee_maker = camping_tag.items.create!(name: 'Portable Coffee Maker')
+campsite_games = camping_tag.items.create!(name: 'Campsite Games')
+smores = camping_tag.items.create!(name: 'Smores')
+prepared_meals = camping_tag.items.create!(name: 'Prepared Meals')
 
 #CAMPING/BACKPACKING ITEMS
 tent = Item.create!(name: 'Tent')
