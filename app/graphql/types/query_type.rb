@@ -15,12 +15,6 @@ module Types
       User.find(id)
     end
 
-    field :allItems, [Types::ItemType], null: false
-
-    def allItems
-      Item.all.distinct
-    end
-
     field :items, [Types::ItemType], null: false do
       argument :category, String, required: true
     end

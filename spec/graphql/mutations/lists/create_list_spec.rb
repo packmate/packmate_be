@@ -61,23 +61,6 @@ module Mutations
             expect(data['errors']).to eq(["Name can't be blank"])
           end
         end
-
-        # context 'with invalid tripType' do
-        #   it 'does not create a list' do
-        #     list_count = List.count
-        #     post '/graphql', params: { query: query_invalid_tripType }
-
-        #     expect(List.count).to eq(list_count)
-        #   end
-
-        #   it 'does not return a list' do
-        #     post '/graphql', params: { query: query_invalid_tripType }
-        #     data = JSON.parse(response.body)['data']['createList']
-
-        #     expect(data['list']).to be_nil
-        #     expect(data['errors']).to eq(["Trip type is not included in the list"])
-        #   end
-        # end
       end
 
       def query
@@ -154,31 +137,6 @@ module Mutations
           }
         GQL
       end
-
-      # def query_invalid_tripType
-      #   <<~GQL
-      #     mutation{
-      #       createList(input:{
-      #         name: "New List"
-      #         tripType: "Invalid"
-      #         items: ["Socks", "Gloves"]
-      #       }){
-      #         list {
-      #           id
-      #           name
-      #           tripType
-      #           items {
-      #             id
-      #             name
-      #           }
-      #           createdAt
-      #           updatedAt
-      #         }
-      #         errors
-      #       }
-      #     }
-      #   GQL
-      # end
     end
   end
 end
