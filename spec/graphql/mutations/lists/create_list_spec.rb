@@ -44,6 +44,23 @@ module Mutations
             expect(data['errors']).to be_empty
           end
         end
+
+        context 'with invalid name' do
+          it 'does not create a list' do
+            list_count = List.count
+            post '/graphql', params: { query: query_invalid_name }
+
+            expect(List.count).to eq(list_count)
+          end
+
+          it 'does not return a list' do
+            post '/graphql', params: { query: query_invalid_name }
+            data = JSON.parse(response.body)['data']['createList']
+
+            expect(data['list']).to be_nil
+            expect(data['errors']).to eq(["Name can't be blank"])
+          end
+        end
       end
 
       def query
