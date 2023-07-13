@@ -8,13 +8,13 @@ class Mutations::CreateList < Mutations::BaseMutation
 
   def resolve(name:, trip_type:, items:)
     list = List.new(name: name, trip_type: trip_type)
-    
+
     if list.save
       items.each do |item|
         item = Item.find_or_create_by(name: item)
         ListItem.create(list_id: list.id, item_id: item.id)
       end
-  
+
       {
         list: list,
         errors: []
