@@ -1,4 +1,6 @@
-# PackMate Backend 🎣 ⛺🥾 ✔️ 
+<h1 align="center">
+    PackMate Backend 🎣 ⛺🥾 ✔️ 
+</h1>
 
 <p align="center">
     <a href="https://circleci.com/gh/packmate/packmate_be/tree/master">
@@ -11,7 +13,7 @@
 </p>
 
 Welcome to the backend repository for PackMate, an app designed to help you plan and organize your adventure necessities for every trip. This repository focuses on the backend functionality and utilizes GraphQL, a powerful query language, to efficiently handle data retrieval and manipulation.
-  - ### Features:
+  - ### Features
     - Public (non-authenticated) users can access all causes on the platform
     - Continous Integration with CircleCI
     - Continous Deployment with Heroku
@@ -19,8 +21,8 @@ Welcome to the backend repository for PackMate, an app designed to help you plan
   - ### Links
     - [PackMate](https://packmate-fe.vercel.app/) is fully deployed at https://packmate-fe.vercel.app/
     - [Backend Repo](github.com/packmate/packmate_be) | [Frontend Repo](github.com/packmate/packmate_fe)
-  - ### Let's Connect! ✉️
-    | **Young Heon Koh** | Margaret Daly |
+  - ### Let's Connect ✉️
+    | Young Heon Koh | Margaret Daly |
     | ----------- | ----------- |
     | [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/kohyoungheon/) | [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/marg-aret-daly/) |
     | [![Github][github-shield]](https://github.com/kohyoungheon) | [![Github][github-shield]](https://github.com/margdaly) |
