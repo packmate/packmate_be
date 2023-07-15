@@ -1,4 +1,4 @@
-# [PackMate](https://packmate-fe.vercel.app/)
+# [PackMate](https://packmate-fe.vercel.app/) 🎣 ⛺🥾 ✔️ 
 
 <p align="center">
     <a href="https://circleci.com/gh/packmate/packmate_be/tree/master">
@@ -10,11 +10,7 @@
         <img src="https://img.shields.io/github/contributors/packmate/packmate_be" /></a>
 </p>
 
-<!--
--->
-
-
-## Let's Connect!
+## Let's Connect! ✉️
 
 | **Young Heon Koh** | Margaret Daly |
 | ----------- | ----------- |
@@ -53,6 +49,10 @@ Don't forget to give the project a star! Thanks again!
 [linkedin-shield]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [github-shield]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
+
+<!--
+✅ 🚀 🏗️ 🧳 📃 📄 📑 🔖 🏷️ 📝 💌 🧗 🚣 🛶 🚴 🚠
+-->
 
 <!-- # README
 
