@@ -20,7 +20,7 @@ Welcome to the backend repository for PackMate, an app designed to help you plan
     - GraphQL server application
   - ### Links
     - [PackMate](https://packmate-fe.vercel.app/) is fully deployed at https://packmate-fe.vercel.app/
-    - [Backend Repo](github.com/packmate/packmate_be) | [Frontend Repo](github.com/packmate/packmate_fe)
+    - [Backend Repo](https://github.com/packmate/packmate_be) | [Frontend Repo](https://github.com/packmate/packmate_fe)
   - ### Let's Connect ✉️
     | Young Heon Koh | Margaret Daly |
     | ----------- | ----------- |
